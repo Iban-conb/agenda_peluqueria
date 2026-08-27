@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="104" fill="#8C4A64"/>
+  <rect x="26" y="26" width="460" height="460" rx="86" fill="none" stroke="#C47B8A" stroke-opacity="0.35" stroke-width="4"/>
+  <!-- bola superior del poste -->
+  <circle cx="256" cy="96" r="22" fill="#F5DDE3"/>
+  <!-- cuerpo del poste -->
+  <defs>
+    <clipPath id="pole">
+      <rect x="208" y="124" width="96" height="300" rx="48"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#pole)">
+    <rect x="208" y="124" width="96" height="300" fill="#ffffff"/>
+    <path d="M170 210 L350 152 v52 L170 262 z" fill="#B3364D"/>
+    <path d="M170 292 L350 234 v52 L170 344 z" fill="#34558B"/>
+    <path d="M170 374 L350 316 v52 L170 426 z" fill="#B3364D"/>
+  </g>
+  <rect x="208" y="124" width="96" height="300" rx="48" fill="none" stroke="#F5DDE3" stroke-width="14"/>
+  <!-- destellos -->
+  <circle cx="392" cy="110" r="10" fill="#F5DDE3"/>
+  <circle cx="416" cy="146" r="7" fill="#F5DDE3" fill-opacity="0.75"/>
+  <circle cx="430" cy="178" r="5" fill="#F5DDE3" fill-opacity="0.5"/>
+</svg>

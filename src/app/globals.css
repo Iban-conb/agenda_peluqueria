@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+/* ============================================================
+   PALETAS DE COLORES — 3 temas intercambiables
+   Las variables se definen en :root (default = Rosa) y se
+   sobrescriben mediante clases aplicadas a <html>.
+   ============================================================ */
+
+@theme {
+  --font-display: "Bricolage Grotesque", "Instrument Sans", ui-sans-serif, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Defaults = TEMA ROSA (tema por defecto de la aplicación) */
+  --color-paper: #faf3f1;
+  --color-card: #fffaf8;
+  --color-ink: #4a2c30;
+  --color-soft: #7a5560;
+  --color-faint: #a98a93;
+  --color-line: #f0dde0;
+  --color-linedark: #e0c2c8;
+
+  --color-pine: #8c4a64;
+  --color-pine2: #a05976;
+  --color-moss: #b86c8a;
+  --color-mint: #f4e3e8;
+
+  --color-gold: #c47b8a;
+  --color-golddeep: #9a5a68;
+  --color-goldsoft: #f5dde3;
+
+  --color-danger: #9c2b3e;
+  --color-dangersoft: #f8dde2;
+  --color-warnfg: #a16207;
+  --color-warnsoft: #f7ecd2;
+  --color-okfg: #5a8a4a;
+  --color-oksoft: #e1eed8;
+  --color-slatefg: #6b5050;
+  --color-slatesoft: #ebe1e0;
+}
+
+/* ============================================================
+   PALETA LEGACY (verde pino + dorado)
+   Cálido, natural, "salón boutique con planta"
+   ============================================================ */
+.theme-aura {
+  --color-paper: #f2f4ef;
+  --color-card: #fcfdfb;
+  --color-ink: #1b2621;
+  --color-soft: #5f6d65;
+  --color-faint: #8b968e;
+  --color-line: #dfe4da;
+  --color-linedark: #c6cfc0;
+
+  --color-pine: #163c2c;
+  --color-pine2: #1e5540;
+  --color-moss: #2e6e4f;
+  --color-mint: #e2ece2;
+
+  --color-gold: #2e6e4f;
+  --color-golddeep: #1e5540;
+  --color-goldsoft: #e2ece2;
+
+  --color-danger: #b3364d;
+  --color-dangersoft: #f8e1e6;
+  --color-warnfg: #a16207;
+  --color-warnsoft: #f7ecd2;
+  --color-okfg: #1d7a46;
+  --color-oksoft: #dcefe2;
+  --color-slatefg: #46564f;
+  --color-slatesoft: #e5eae4;
+
+  --bg-overlay-1: rgba(27, 38, 33, 0.05);
+  --bg-overlay-2: rgba(200, 155, 60, 0.16);
+  --bg-overlay-3: rgba(30, 85, 64, 0.17);
+}
+
+/* ============================================================
+   TEMA 2 — ROSA (rosa viejo + crema + chocolate)  ← por defecto
+   Romántico, suave, "boutique vintage de peluquería"
+   ============================================================ */
+:root,
+.theme-rosa {
+  --color-paper: #faf3f1;
+  --color-card: #fffaf8;
+  --color-ink: #4a2c30;
+  --color-soft: #7a5560;
+  --color-faint: #a98a93;
+  --color-line: #f0dde0;
+  --color-linedark: #e0c2c8;
+
+  --color-pine: #8c4a64;       /* Rosa principal (oscuro) */
+  --color-pine2: #a05976;     /* Hover pine */
+  --color-moss: #b86c8a;      /* Acento medio */
+  --color-mint: #f4e3e8;       /* Fondo suave de acento */
+
+  --color-gold: #c47b8a;       /* Acento dorado → rosa coral */
+  --color-golddeep: #9a5a68;
+  --color-goldsoft: #f5dde3;
+
+  --color-danger: #9c2b3e;
+  --color-dangersoft: #f8dde2;
+  --color-warnfg: #a16207;
+  --color-warnsoft: #f7ecd2;
+  --color-okfg: #5a8a4a;
+  --color-oksoft: #e1eed8;
+  --color-slatefg: #6b5050;
+  --color-slatesoft: #ebe1e0;
+
+  --bg-overlay-1: rgba(74, 44, 48, 0.05);
+  --bg-overlay-2: rgba(196, 123, 138, 0.18);
+  --bg-overlay-3: rgba(140, 74, 100, 0.16);
+}
+
+/* ============================================================
+   TEMA 3 — NOCHE (negro + rosa, lujo)
+   Elegante, premium, "alta peluquería nocturna"
+   ============================================================ */
+.theme-noche {
+  --color-paper: #0d0a0c;
+  --color-card: #171216;
+  --color-ink: #f2dce3;        /* Texto principal en rosa claro */
+  --color-soft: #c0a2ae;
+  --color-faint: #8a6f7a;
+  --color-line: #2b2227;
+  --color-linedark: #3c2f36;
+
+  --color-pine: #191317;       /* Header negro con matiz rosa */
+  --color-pine2: #251b21;
+  --color-moss: #d98aa6;       /* Acento rosa */
+  --color-mint: #241b21;       /* Fondo suave */
+
+  --color-gold: #d98aa6;       /* Acento rosa principal */
+  --color-golddeep: #e3a9bc;
+  --color-goldsoft: #2e2126;
+
+  --color-danger: #d95a75;
+  --color-dangersoft: #2e1a1f;
+  --color-warnfg: #e0a040;
+  --color-warnsoft: #2a1f10;
+  --color-okfg: #7fc08f;
+  --color-oksoft: #16261c;
+  --color-slatefg: #c0a2ae;
+  --color-slatesoft: #201a1d;
+
+  --bg-overlay-1: rgba(217, 138, 166, 0.05);
+  --bg-overlay-2: rgba(217, 138, 166, 0.10);
+  --bg-overlay-3: rgba(0, 0, 0, 0.30);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--color-goldsoft);
+  color: var(--color-pine);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-linedark);
+  border-radius: 8px;
+  border: 2px solid var(--color-paper);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-faint);
+}
+
+/* ---- fondo ambiental por capas (tema-dependiente) ---- */
+.app-bg {
+  background-image:
+    radial-gradient(var(--bg-overlay-1) 1px, transparent 1.4px),
+    radial-gradient(1100px 520px at 88% -12%, var(--bg-overlay-2), transparent 62%),
+    radial-gradient(900px 640px at -12% -6%, var(--bg-overlay-3), transparent 58%);
+  background-size:
+    22px 22px,
+    auto,
+    auto;
+  background-attachment: fixed;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- animaciones ---- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes toastin {
+  from { opacity: 0; transform: translateY(14px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pulsegold {
+  0% { box-shadow: 0 0 0 0 rgba(184, 108, 138, 0.55); }
+  70% { box-shadow: 0 0 0 9px rgba(184, 108, 138, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 108, 138, 0); }
+}
+
+.anim-rise {
+  animation: rise 0.45s cubic-bezier(0.22, 0.9, 0.3, 1) both;
+}
+.anim-pop {
+  animation: pop 0.28s cubic-bezier(0.22, 0.9, 0.3, 1) both;
+}
+.anim-fade {
+  animation: fadein 0.22s ease both;
+}
+.anim-toast {
+  animation: toastin 0.32s cubic-bezier(0.22, 0.9, 0.3, 1) both;
+}
+.pulse-gold {
+  animation: pulsegold 2.2s ease-out infinite;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+/* En el tema noche, los inputs deben tener fondo claro para ser legibles */
+.theme-noche input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+.theme-noche select,
+.theme-noche textarea {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: var(--color-ink);
+  border-color: var(--color-linedark);
+}
+.theme-noche input::placeholder,
+.theme-noche textarea::placeholder {
+  color: var(--color-faint);
+}
+.theme-noche select option {
+  background-color: var(--color-card);
+  color: var(--color-ink);
+}
+
+/* El topbar necesita su propio contraste porque el tema Noche usa
+   negro para el fondo general y para la variable paper. */
+.theme-noche header {
+  background-color: #3c2430 !important;
+  color: #f7e8ee;
+}
+.theme-noche header .text-paper,
+.theme-noche header .text-paper\/70,
+.theme-noche header .text-paper\/50,
+.theme-noche header .text-gold\/90 {
+  color: #f7e8ee !important;
+}
+.theme-noche header .bg-paper {
+  background-color: #f7e8ee !important;
+}
+.theme-noche header .text-pine {
+  color: #3c2430 !important;
+}
+
+/* ============================================================
+   LEGIBILIDAD EN MÓVIL / PWA
+   Sube los tamaños mínimos de tipografía en pantallas pequeñas
+   para que no haya que hacer zoom: la vista móvil deja de ser
+   "la de escritorio en miniatura".
+   ============================================================ */
+@media (max-width: 639px) {
+  .text-\[8px\]  { font-size: 10px; }
+  .text-\[9px\]  { font-size: 11px; }
+  .text-\[10px\] { font-size: 12px; }
+  .text-\[11px\] { font-size: 12.5px; }
+  .text-\[11\.5px\] { font-size: 13px; }
+  .text-xs { font-size: 13.5px; }
+  .text-sm { font-size: 15px; }
+}
+
+/* Número del día en el calendario mensual: círculo más grande en móvil */
+@media (max-width: 639px) {
+  .calendar-daynum {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}

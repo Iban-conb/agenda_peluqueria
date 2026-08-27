@@ -1,0 +1,27 @@
+{
+  "name": "Peluquería Marisa · Gestión de citas",
+  "short_name": "P. Marisa",
+  "description": "Agenda diaria y base de clientes para tu salón de peluquería. Funciona en PC, intranet y móvil.",
+  "lang": "es",
+  "start_url": "./",
+  "id": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#faf3f1",
+  "theme_color": "#8c4a64",
+  "icons": [
+    {
+      "src": "./icon-peluqueria-marisa.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-peluqueria-marisa.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
